@@ -1,4 +1,4 @@
-{% set version = "2.3.0" %}
+{% set version = "2.3.1" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/brms_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/brms/brms_{{ version }}.tar.gz
-  sha256: 37c14729914b84e9dde9be38c1164955862ed32a87338e6980fc411f582d55bd
+  sha256: 949740e04336d578245d7bda538b85119896b3ff30fb55bfc1abe4346b8f988c
 
 build:
   number: 0
