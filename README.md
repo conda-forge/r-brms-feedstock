@@ -1,7 +1,7 @@
 About r-brms
 ============
 
-Home: https://github.com/paul-buerkner/brms
+Home: https://github.com/paul-buerkner/brms, http://discourse.mc-stan.org
 
 Package license: GPL (>= 3)
 
