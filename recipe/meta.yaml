@@ -1,4 +1,4 @@
-{% set version = '2.3.1' %}
+{% set version = '2.6.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,17 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: brms_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/brms_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/brms/brms_{{ version }}.tar.gz
-  sha256: 949740e04336d578245d7bda538b85119896b3ff30fb55bfc1abe4346b8f988c
+  sha256: 12da78716f07644e5a56aafeb6f8797fa1cf16928804254e88529b59ae61507d
 
 build:
   merge_build_host: True  # [win]
   number: 0
-  # no win64 package for r-shinystan
-  skip: true  # [win]
+  skip: true  # [win32]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -27,6 +25,7 @@ requirements:
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
     - {{native}}toolchain        # [win]
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-matrix >=1.1.1
@@ -96,3 +95,4 @@ extra:
     - daler
     - jdblischak
     - cbrueffer
+    - dbast
