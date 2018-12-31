@@ -15,7 +15,8 @@ source:
 build:
   merge_build_host: True  # [win]
   number: 1000
-  skip: true  # [win32]
+  # given by the availability of rstan
+  skip: true  # [win or linux and c_compiler == "toolchain_c"]
   rpaths:
     - lib/R/lib/
     - lib/
