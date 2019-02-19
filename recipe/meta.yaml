@@ -1,4 +1,4 @@
-{% set version = '2.6.0' %}
+{% set version = "2.7.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/brms_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/brms/brms_{{ version }}.tar.gz
-  sha256: 12da78716f07644e5a56aafeb6f8797fa1cf16928804254e88529b59ae61507d
+  sha256: b7359b9a3ff5f334c08110097c046b37c97a4096019324a559b468bbf9acf9a8
 
 build:
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   # given by the availability of rstan
   skip: true  # [win or linux and c_compiler == "toolchain_c"]
   rpaths:
