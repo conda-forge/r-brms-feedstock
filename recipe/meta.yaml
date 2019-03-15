@@ -15,7 +15,8 @@ source:
 build:
   merge_build_host: True  # [win]
   number: 0
-  noarch: generic
+  # given by the availability of rstan
+  skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
