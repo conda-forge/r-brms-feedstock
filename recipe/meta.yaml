@@ -1,4 +1,4 @@
-{% set version = '2.10.0' %}
+{% set version = "2.11.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/brms_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/brms/brms_{{ version }}.tar.gz
-  sha256: 90466f45179142a9b7bafa6745ae1831a402786bd80856a409638694777c6983
+  sha256: ceb11f978c096b5840f202b8088ad853f916ccb3d731cdbf16688aef8fee01f4
 
 build:
   merge_build_host: True  # [win]
