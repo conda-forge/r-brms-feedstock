@@ -1,4 +1,4 @@
-{% set version = "2.11.1" %}
+{% set version = "2.12.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/brms_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/brms/brms_{{ version }}.tar.gz
-  sha256: 4b45a67b8e695a1eb062620b836f1e773b3ee48e130e9816a8a29d56ba426bcc
+  sha256: fa21505dca65d027f1cf1c573258de5f3c51ca8b94abd6dcf9123a3a27a72999
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   # given by the availability of rstan
   skip: true  # [win]
   number: 0
@@ -78,22 +78,16 @@ test:
 about:
   home: https://github.com/paul-buerkner/brms, http://discourse.mc-stan.org
   license: GPL-3
-  summary: "Fit Bayesian generalized (non-)linear multivariate multilevel models using 'Stan'
-    for full Bayesian inference. A wide range of distributions  and link functions are
-    supported, allowing users to fit -- among others --  linear, robust linear, count
-    data, survival, response times, ordinal,  zero-inflated, hurdle, and even self-defined
-    mixture models all in a  multilevel context. Further modeling options include non-linear
-    and  smooth terms, auto-correlation structures, censored data, meta-analytic  standard
-    errors, and quite a few more. In addition, all parameters of the  response distribution
-    can be predicted in order to perform distributional  regression. Prior specifications
-    are flexible and explicitly encourage  users to apply prior distributions that actually
-    reflect their beliefs. Model fit can easily be assessed and compared with posterior
-    predictive  checks and leave-one-out cross-validation. References: B\xFCrkner (2017)
-    <doi:10.18637/jss.v080.i01>; B\xFCrkner (2018) <doi:10.32614/RJ-2018-017>; Carpenter
-    et al. (2017) <doi:10.18637/jss.v076.i01>."
+  summary: "Fit Bayesian generalized (non-)linear multivariate multilevel models using 'Stan' for full Bayesian inference. A wide range of distributions  and link\
+    \ functions are supported, allowing users to fit -- among others --  linear, robust linear, count data, survival, response times, ordinal,  zero-inflated, hurdle,\
+    \ and even self-defined mixture models all in a  multilevel context. Further modeling options include non-linear and  smooth terms, auto-correlation structures,\
+    \ censored data, meta-analytic  standard errors, and quite a few more. In addition, all parameters of the  response distribution can be predicted in order to\
+    \ perform distributional  regression. Prior specifications are flexible and explicitly encourage  users to apply prior distributions that actually reflect their\
+    \ beliefs. Model fit can easily be assessed and compared with posterior predictive  checks and leave-one-out cross-validation. References: Bürkner (2017) <doi:10.18637/jss.v080.i01>;\
+    \ Bürkner (2018) <doi:10.32614/RJ-2018-017>; Carpenter et al. (2017) <doi:10.18637/jss.v076.i01>."
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
