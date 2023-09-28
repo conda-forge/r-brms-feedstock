@@ -45,8 +45,8 @@ requirements:
     - r-nleqslv
     - r-nlme
     - r-posterior >=1.0.0
-    - r-projpred >=2.0.0
-    - r-rstan >=2.19.2
+    - r-rlang >=1.0.0
+    - r-rstan >=2.26.0
     - r-rstantools >=2.1.1
     - r-shinystan >=2.4.0
   run:
@@ -68,8 +68,8 @@ requirements:
     - r-nleqslv
     - r-nlme
     - r-posterior >=1.0.0
-    - r-projpred >=2.0.0
-    - r-rstan >=2.19.2
+    - r-rlang >=1.0.0
+    - r-rstan >=2.26.0
     - r-rstantools >=2.1.1
     - r-shinystan >=2.4.0
 
