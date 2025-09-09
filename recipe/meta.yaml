@@ -1,4 +1,4 @@
-{% set version = "2.20.1" %}
+{% set version = "2.23.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/brms_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/brms/brms_{{ version }}.tar.gz
-  sha256: 4908334731f6bd9020e394d68742c3a3558676cc056b04ae4d6bbbb942171e5c
+  sha256: b5f5bb5604ec3f87b3ad99f0da4e6a37d8c5488221e8abe459171340992c37a5
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
